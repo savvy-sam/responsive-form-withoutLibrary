@@ -12,19 +12,19 @@ const RegisterFormInput = (props) => {
 
   return (
 
-    <box className='formInput'>
+        <div className='input-box'>
         <label>{label}</label>
     <input
         {...inputProps}
         onChange={onChange}
         onBlur={handleFocus}
         onFocus={() =>
-          inputProps.name === "confirmPassword" && setFocused(true)
+          setFocused(true)
         }
         focused={focused.toString()}
       />
       <span>{errorMessage}</span>
-    </box>
+      </div>
     
   )
 }

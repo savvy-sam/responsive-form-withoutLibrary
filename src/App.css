@@ -1,37 +1,58 @@
-.App{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: whitesmoke;
+    padding: 20px;
+    background: rgb(89, 89, 125);
+  }
 
-}
-
-h1 {
-    text-align: center;
-    color: rgb(77, 1, 77);
-}
-
-form{
-    background-color: white;
-    margin-top: 10px;
-    padding: 0px, 60px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-}
-
-button{
+  .container {
+    position: relative;
+    max-width: 700px;
     width: 100%;
-    padding: 10px;
-    height: fit-content;
-    background-color: brown;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .container .form {
+    margin-top: 30px;
+  }
+
+  .form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
     cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+  }
+  .form button:hover {
+    background: rgb(88, 56, 250);
+  }
+
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+    }
+  }

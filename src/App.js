@@ -19,7 +19,6 @@ function App() {
       id: 1,
       name: "firstname",
       type: "text",
-      placeholder: "firstname",
       errorMessage:
         "firstname should be 3-16 characters and shouldn't include any special character!",
       label: "First Name",
@@ -30,7 +29,6 @@ function App() {
       id: 2,
       name: "lastname",
       type: "text",
-      placeholder: "lastname",
       errorMessage:
         "lastname should be 3-16 characters and shouldn't include any special character!",
       label: "Last Name",
@@ -41,7 +39,6 @@ function App() {
       id: 3,
       name: "username",
       type: "text",
-      placeholder: "Username",
       errorMessage:
         "Username should be 3-16 characters and shouldn't include any special character!",
       label: "Username",
@@ -52,7 +49,6 @@ function App() {
       id: 4,
       name: "email",
       type: "email",
-      placeholder: "Email",
       errorMessage: "It should be a valid email address!",
       label: "Email",
       required: true,
@@ -61,7 +57,6 @@ function App() {
       id: 5,
       name: "birthday",
       type: "date",
-      placeholder: "Birthday",
       label: "Birthday",
       required: true
     },
@@ -69,7 +64,6 @@ function App() {
       id: 6,
       name: "password",
       type: "password",
-      placeholder: "Password",
       errorMessage:
         "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
       label: "Password",
@@ -80,7 +74,6 @@ function App() {
       id: 7,
       name: "confirmPassword",
       type: "password",
-      placeholder: "Confirm Password",
       errorMessage: "Passwords don't match!",
       label: "Confirm Password",
       pattern: values.password,
@@ -102,18 +95,18 @@ function App() {
 
   
   return (
-  <box className="App">
-    <h1>Register Form</h1>
-    <box>
-  <form onSubmit = {handleSubmit}>
+     <section className="container">
+    <header>Registration Form</header>
+  <form onSubmit = {handleSubmit} className="form">
+    <div className='wrapper'>
     {inputs.map((input) => (
       <RegisterFormInput key={input.id} {...input} value={values[input.name]}
       onChange={onChange}/>
     ))}
    <button>Submit</button>
+   </div>
   </form>
-  </box>
-    </box>
+  </section>
   );
 }
 
